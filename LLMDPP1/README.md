@@ -63,20 +63,4 @@ python evaluator.py --model "flan-t5-base" \
     --systems "Mac,Android,Thunderbird,HealthApp,OpenStack,OpenSSH,Proxifier,HPC,Zookeeper,Hadoop,Linux,HDFS,BGL,Windows,Apache,Spark" 
 ```
 
-## Evaluation Results
-### RQ1: What is the accuracy of LLM?
-<p align="center"><img src="docs/tab2.png" width="800"></p>
 
-### RQ2: How does the accuracy of log parsing vary under different shot sizes?
-<p align="center"><img src="docs/tab3.png" width="800"></p>
-<p align="center"><img src="docs/tab6.png" width="500"></p>
-
-### RQ3: How is the generalizability of LLMParsers on unseen log templates?
-<p align="center"><img src="docs/tab4.png" width="800"></p>
-
-### RQ4: Can pre-trained LLMParsers help improve parsing accuracy?
-<p align="center"><img src="docs/tab5.png" width="800"></p>
-
-
-
-python dpp_tf.py --project "Mac"   --shot 50
