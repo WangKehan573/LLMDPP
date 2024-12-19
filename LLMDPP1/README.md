@@ -14,7 +14,7 @@ sh env_init.sh
 To download the Large Language Models:
 ```shell
 cd LLMs
-sh flan-t5-base.sh
+sh flan-t5-small.sh
 ```
 
 
@@ -22,18 +22,23 @@ sh flan-t5-base.sh
 
 Sample 50 logs from Mac dataset
 ```shell
-python data_sampling --project "Mac" \
-                --shot 50
+
 ```
+tf-idf
 python dpp_tf.py --project "Mac" \
-                --shot 50
+                --percentage 0.025
+
+embedding:
+python embedding.py
+python dpp_em.py --project "Mac" \
+                --percentage 0.025
 
 ## Fine-tune and Inference
 
-Flan-T5-base or Flan-T5-small (fine-tuned with 50 shot)
+Flan-T5-small (fine-tuned with 50 shot)
 ```shell
 cd flan-t5
-python train.py --model "flan-t5-base"\
+python train.py --model "flan-t5-small"\
                 --num_epochs 30 \
                 --learning_rate 5e-4 \
                 --train_percentage "cross" \
@@ -41,25 +46,13 @@ python train.py --model "flan-t5-base"\
                 --systems "Mac,Android,Thunderbird,HealthApp,OpenStack,OpenSSH,Proxifier,HPC,Zookeeper,Hadoop,Linux,HDFS,BGL,Windows,Apache,Spark"
 ```
 
-LLaMA (fine-tuned with 50 shot)
-```shell
-cd llama
-sh run.sh 0.025
-```
-
-ChatGLM (fine-tuned with 50 shot)
-```shell
-cd chatglm
-sh run.sh 0.025
-```
-
 ## Evaluation
 
 Evaluate LLM parsing result on certain training dataset size (Flan-T5-base result on 50 shots)
 ```shell
 cd evaluate
-python evaluator.py --model "flan-t5-base" \
-    --train_percentage "0.025" \
+python evaluator.py --model "flan-t5-small" \
+    --train_percentage "dpp_tf_0.025" \
     --systems "Mac,Android,Thunderbird,HealthApp,OpenStack,OpenSSH,Proxifier,HPC,Zookeeper,Hadoop,Linux,HDFS,BGL,Windows,Apache,Spark" 
 ```
 
