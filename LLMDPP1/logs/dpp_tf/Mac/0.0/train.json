@@ -1,0 +1,1 @@
+[{"instruction":"Parse the input log to log template.","input":"Captive: CNPluginHandler en0: Evaluating","output":"Captive: CNPluginHandler en0: Evaluating"}]

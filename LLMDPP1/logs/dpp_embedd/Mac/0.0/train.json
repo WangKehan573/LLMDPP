@@ -1,0 +1,1 @@
+[{"instruction":"Parse the input log to log template.","input":"com.apple.Safari.SafeBrowsing.Update: scheduler_evaluate_activity told me to run this job; however, but the start time isn't for 138 seconds.  Ignoring.","output":"com.apple.<*>: scheduler_evaluate_activity told me to run this job; however, but the start time isn't for <*> seconds. Ignoring."}]
