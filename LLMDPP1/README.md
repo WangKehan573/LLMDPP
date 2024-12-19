@@ -22,8 +22,6 @@ sh flan-t5-small.sh
 
 Sample 50 logs from Mac dataset
 ```shell
-
-```
 tf-idf
 python dpp_tf.py --project "Mac" \
                 --percentage 0.025
@@ -32,6 +30,8 @@ embedding:
 python embedding.py
 python dpp_em.py --project "Mac" \
                 --percentage 0.025
+```
+
 
 ## Fine-tune and Inference
 
