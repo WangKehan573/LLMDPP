@@ -56,7 +56,10 @@ python evaluator.py --model "flan-t5-small" \
     --systems "Mac,Android,Thunderbird,HealthApp,OpenStack,OpenSSH,Proxifier,HPC,Zookeeper,Hadoop,Linux,HDFS,BGL,Windows,Apache,Spark" 
 ```
 
-Our code draws inspiration from the following articles:
-DivLog: Log Parsing with Prompt Enhanced In-Context Learning
+Our code is written based on the following two projects：
 
-Llmparser: An exploratory study on using large language models for log parsing,
+https://github.com/logpai/logparser
+
+https://github.com/zeyang919/LLMParser
+
+
